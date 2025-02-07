@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        width: 200px;
+        padding: 10px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+      }
+      h1 {
+        font-size: 16px;
+        text-align: center;
+        margin: 0 0 12px;
+        color: rgb(55, 53, 47);
+        font-weight: 500;
+      }
+      #time-input {
+        display: flex;
+        gap: 8px;
+        margin: 10px 0;
+        justify-content: center;
+      }
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+      .input-group label {
+        font-size: 11px;
+        color: rgb(55, 53, 47);
+        opacity: 0.6;
+      }
+      input {
+        width: 45px;
+        text-align: center;
+        padding: 6px 4px;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      input:focus {
+        outline: none;
+        border-color: rgb(55, 53, 47);
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      button {
+        width: 100%;
+        margin: 5px 0;
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        background: rgb(55, 53, 47);
+        color: white;
+        cursor: pointer;
+      }
+      button:hover {
+        opacity: 0.9;
+      }
+      #timeLeft {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 1.2em;
+        color: rgb(55, 53, 47);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Notion Focus Mode</h1>
+    <div id="timeLeft"></div>
+    <div id="time-input">
+      <div class="input-group">
+        <input type="number" id="hours" placeholder="00" min="0" max="23" />
+        <label>Hours</label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="minutes" placeholder="00" min="0" max="59" />
+        <label>Minutes</label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="seconds" placeholder="00" min="0" max="59" />
+        <label>Seconds</label>
+      </div>
+    </div>
+    <button id="startTimer">Start Focus Time</button>
+    <button id="stopTimer">Stop Focus Time</button>
+    <script src="popup.js"></script>
+  </body>
+</html>
