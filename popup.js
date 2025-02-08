@@ -37,6 +37,11 @@ function updateUI(isDNDActive) {
   startButton.hidden = isDNDActive;
   stopButton.hidden = !isDNDActive;
   timeInputs.style.display = isDNDActive ? "none" : "flex";
+
+  // Update extension icon
+  chrome.action.setIcon({
+    path: isDNDActive ? "icon-enabled.png" : "icon-disabled.png",
+  });
 }
 
 let timerHandle = null;

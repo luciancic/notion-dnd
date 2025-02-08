@@ -3,15 +3,22 @@
   "name": "Notion Do Not Disturb",
   "version": "0.0.1",
   "description": "Hide notification icons in Notion for better focus",
+  "icons": {
+    "128": "icon-disabled.png"
+  },
   "permissions": [
     "storage",
-    "scripting"
+    "scripting",
+    "action"
   ],
   "host_permissions": [
     "https://*.notion.so/*"
   ],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon-disabled.png"
+    }
   },
   "content_scripts": [
     {
