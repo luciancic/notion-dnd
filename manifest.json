@@ -1,14 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Notion Do Not Disturb",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hide notification icons in Notion for better focus",
   "icons": {
     "128": "icon-disabled.png"
   },
   "permissions": [
     "storage",
-    "scripting",
     "action"
   ],
   "host_permissions": [
